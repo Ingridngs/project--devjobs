@@ -5,7 +5,7 @@ class Company extends Model {
 		return 'Company'
 	}
 	static get relationMappings() {
-		const Jobs = require('./Job')
+		const Job = require('./Job')
 
 		return {
 			jobs: {
@@ -13,10 +13,11 @@ class Company extends Model {
 				modelClass: Job,
 				join: {
 					from: 'Company.id',
-					to: 'jobs.companyId'
+					to: 'Job.companyId'
 
 				}
 			}
 		}
 	}
 }
+module.exports = Company

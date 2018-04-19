@@ -5,3 +5,5 @@ class Job extends Model {
 		return 'Job'
 	}
 }
+
+module.exports = Job
